@@ -14,8 +14,8 @@ class StudentController extends Controller
     }
     function getAll()
     {
-        $data = Http::get("https://jsonplaceholder.typicode.com/posts");
-        // $data = Student::all();
+        // $data = Http::get("https://jsonplaceholder.typicode.com/posts");
+        $data = Student::all();
         return view('viewall', ["data" => json_decode($data)]);
         // return json_decode($data);
     }
