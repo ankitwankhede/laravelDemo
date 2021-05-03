@@ -13,9 +13,13 @@
       <tbody>
         @foreach ($data as $item)
         <tr>
-          <td>{{$item->FirstName}}</td>
+          {{-- <td>{{$item->FirstName}}</td>
           <td>{{$item->LastName}}</td>
-          <td>{{$item->Email}}</td>
+          <td>{{$item->Email}}</td> --}}
+          <td>{{$item->userId}}</td>
+          <td>{{$item->id}}</td>
+          <td>{{$item->title}}</td>
+          <td>{{$item->body}}}</td>
         </tr>
         @endforeach
       </tbody>

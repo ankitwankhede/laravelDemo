@@ -16,8 +16,8 @@ class StudentController extends Controller
     {
         $data = Http::get("https://jsonplaceholder.typicode.com/posts");
         // $data = Student::all();
-        // return view('viewall', ["data" => $data]);
-        return json_decode($data);
+        return view('viewall', ["data" => json_decode($data)]);
+        // return json_decode($data);
     }
 
     function register()
