@@ -24,4 +24,11 @@ class StudentController extends Controller
     {
         return view('registerStudent');
     }
+
+    function getStudentById($id)
+    {
+        // echo $id;
+        $data = Student::find($id);
+        return $data;
+    }
 }

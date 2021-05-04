@@ -17,5 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'StudentController@index');
 
 Route::get('/view', 'StudentController@getAll');
+Route::get('student/{id}', 'StudentController@getStudentById');
 
 Route::get('/register', 'StudentController@register');

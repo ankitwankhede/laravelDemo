@@ -30,7 +30,9 @@
     </div>
     <div class="col col-lg-2">
       <div class="shadow-lg p-3 mb-5 bg-white rounded">
-        <span id="ajaxData"></span>
+          <h5 id="stid" style="color: red"></h5>
+          <h3 id="sname"></h3>
+          <h5 id="mail"></h5>
       </div>
     </div>
   </div>
