@@ -11,7 +11,6 @@ $(document).ready(function () {
                 $('#stid').text(response.id);
                 $('#sname').text(response.FirstName + " " + response.LastName);
                 $('#mail').text(response.Email);
-
             }
         });
     });

@@ -29,10 +29,10 @@
       </table>
     </div>
     <div class="col col-lg-2">
-      <div class="shadow-lg p-3 mb-5 bg-white rounded">
-          <h5 id="stid" style="color: red"></h5>
-          <h3 id="sname"></h3>
-          <h5 id="mail"></h5>
+      <div class="shadow-lg p-3 mb-5 bg-white rounded" style="width: 250px;height: 250px;">
+        <h5 id="stid" style="color: red"></h5>
+        <h3 id="sname"></h3>
+        <h5 id="mail"></h5>
       </div>
     </div>
   </div>
