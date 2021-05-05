@@ -31,4 +31,21 @@ class StudentController extends Controller
         $data = Student::find($id);
         return $data;
     }
+    function registerStudent(Request $req)
+    {
+        $firstName = $req->input('fnm');
+        $lastName = $req->input('lnm');
+        $mail = $req->input('mail');
+        $pwd = $req->input('pwd');
+        echo $firstName . " " . $lastName . " " . $mail . " " . $pwd;
+
+        $stu = new Student();
+        $stu->FirstName = $firstName;
+        $stu->LastName = $lastName;
+        $stu->Email = $mail;
+        $stu->password = $pwd;
+        // $stu->id
+        $stu->save();
+        redirect('viewall');
+    }
 }
