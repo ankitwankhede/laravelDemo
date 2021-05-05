@@ -37,7 +37,7 @@ class StudentController extends Controller
         $lastName = $req->input('lnm');
         $mail = $req->input('mail');
         $pwd = $req->input('pwd');
-        echo $firstName . " " . $lastName . " " . $mail . " " . $pwd;
+        // echo $firstName . " " . $lastName . " " . $mail . " " . $pwd;
 
         $stu = new Student();
         $stu->FirstName = $firstName;
