@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    $('#studentTable').DataTable();
+
     $('td').mouseenter(function () {
         $id = $(this).attr('value');
         $.ajax({

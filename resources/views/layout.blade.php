@@ -3,6 +3,7 @@
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" crossorigin="anonymous">
 </head>
 
 <body>
@@ -16,6 +17,8 @@
       <div class="navbar-nav">
         <a class="nav-link " href="/register">Register <span class="sr-only">(current)</span></a>
         <a class="nav-link" href="/view">View all</a>
+        <a class="nav-link" href="/login">Login</a>
+
       </div>
     </div>
   </nav>
@@ -30,7 +33,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
-
+  <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
   <script src="{{asset('js/viewall.js')}}"></script>
 </body>
 

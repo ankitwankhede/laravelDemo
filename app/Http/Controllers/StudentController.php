@@ -12,22 +12,31 @@ class StudentController extends Controller
     {
         return view('welcome');
     }
-    function getAll()
-    {
-        // $data = Http::get("https://jsonplaceholder.typicode.com/posts");
-        $data = Student::all();
-        return view('viewall', ["data" => json_decode($data)]);
-        // return json_decode($data);
-    }
 
     function register()
     {
         return view('registerStudent');
     }
 
+    function login(Request $req)
+    {
+        $mail = $req->input('mail');
+        $pwd = $req->input('pwd');
+        echo $mail . " " . $pwd;
+    }
+    function getAll()
+    {
+        // $data = Http::get("https://jsonplaceholder.typicode.com/posts");
+        $data = Student::all();
+        return view('viewall', ["data" => json_decode($data)]);
+        // return json_decode($data);
+        // return $data;       //for datatable jquery
+        
+
+    }
+
     function getStudentById($id)
     {
-        // echo $id;
         $data = Student::find($id);
         return $data;
     }
@@ -44,8 +53,7 @@ class StudentController extends Controller
         $stu->LastName = $lastName;
         $stu->Email = $mail;
         $stu->password = $pwd;
-        // $stu->id
         $stu->save();
-        redirect('viewall');
+        // redirect('/view');
     }
 }

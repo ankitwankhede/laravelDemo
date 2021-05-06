@@ -21,3 +21,6 @@ Route::get('student/{id}', 'StudentController@getStudentById');
 
 Route::get('/register', 'StudentController@register');
 Route::post('/register', 'StudentController@registerStudent');
+
+Route::view('/login', 'login');
+Route::post('/login','StudentController@login');
