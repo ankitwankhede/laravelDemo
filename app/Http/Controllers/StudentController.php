@@ -22,7 +22,18 @@ class StudentController extends Controller
     {
         $mail = $req->input('mail');
         $pwd = $req->input('pwd');
-        echo $mail . " " . $pwd;
+        // echo $mail . " " . $pwd;
+        $s = Student::where("Email", $mail)->get();
+        if ($s[0]->password == $pwd) {
+            $req->session()->put('user', $s[0]->FirstName);
+            return redirect('/view');
+        }
+    }
+
+    function logout(Request $req)
+    {
+        $req->session()->forget('user');
+        return redirect('/');
     }
     function getAll()
     {
@@ -31,8 +42,6 @@ class StudentController extends Controller
         return view('viewall', ["data" => json_decode($data)]);
         // return json_decode($data);
         // return $data;       //for datatable jquery
-        
-
     }
 
     function getStudentById($id)
@@ -54,6 +63,6 @@ class StudentController extends Controller
         $stu->Email = $mail;
         $stu->password = $pwd;
         $stu->save();
-        // redirect('/view');
+        return redirect('/login');
     }
 }

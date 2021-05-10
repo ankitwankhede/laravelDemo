@@ -23,4 +23,6 @@ Route::get('/register', 'StudentController@register');
 Route::post('/register', 'StudentController@registerStudent');
 
 Route::view('/login', 'login');
-Route::post('/login','StudentController@login');
+Route::post('/login', 'StudentController@login');
+
+Route::get('/logout', 'StudentController@logout');

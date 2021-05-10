@@ -3,7 +3,8 @@
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css"
+    crossorigin="anonymous">
 </head>
 
 <body>
@@ -15,10 +16,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link " href="/register">Register <span class="sr-only">(current)</span></a>
+        @if (Session::get('user'))
         <a class="nav-link" href="/view">View all</a>
+        <h6 style="color: red"> Hello {{Session::get('user')}}</h6>
+        <a class="nav-link" href="/logout">logout</a>
+        @else
+        <a class="nav-link " href="/register">Register <span class="sr-only">(current)</span></a>
         <a class="nav-link" href="/login">Login</a>
-
+        @endif
       </div>
     </div>
   </nav>
